@@ -135,11 +135,15 @@ Added in v2.5.0
   - [URI (type alias)](#uri-type-alias)
   - [Unfoldable](#unfoldable-1)
   - [Witherable](#witherable-1)
+  - [getDifferenceMagma](#getdifferencemagma)
   - [getEq](#geteq)
+  - [getIntersectionSemigroup](#getintersectionsemigroup)
   - [getMonoid](#getmonoid)
   - [getOrd](#getord)
   - [getSemigroup](#getsemigroup)
   - [getShow](#getshow)
+  - [getUnionMonoid](#getunionmonoid)
+  - [getUnionSemigroup](#getunionsemigroup)
   - [~~readonlyArray~~](#readonlyarray)
 - [interop](#interop)
   - [fromArray](#fromarray)
@@ -1807,6 +1811,16 @@ export declare const Witherable: Witherable1<'ReadonlyArray'>
 
 Added in v2.7.0
 
+## getDifferenceMagma
+
+**Signature**
+
+```ts
+export declare const getDifferenceMagma: <A>(E: Eq<A>) => Magma<readonly A[]>
+```
+
+Added in v2.11.0
+
 ## getEq
 
 Derives an `Eq` over the `ReadonlyArray` of a given element type from the `Eq` of that type. The derived `Eq` defines two
@@ -1831,6 +1845,16 @@ assert.strictEqual(E.equals(['a'], []), false)
 ```
 
 Added in v2.5.0
+
+## getIntersectionSemigroup
+
+**Signature**
+
+```ts
+export declare const getIntersectionSemigroup: <A>(E: Eq<A>) => Semigroup<readonly A[]>
+```
+
+Added in v2.11.0
 
 ## getMonoid
 
@@ -1899,6 +1923,26 @@ export declare const getShow: <A>(S: Show<A>) => Show<readonly A[]>
 ```
 
 Added in v2.5.0
+
+## getUnionMonoid
+
+**Signature**
+
+```ts
+export declare const getUnionMonoid: <A>(E: Eq<A>) => Monoid<readonly A[]>
+```
+
+Added in v2.11.0
+
+## getUnionSemigroup
+
+**Signature**
+
+```ts
+export declare const getUnionSemigroup: <A>(E: Eq<A>) => Semigroup<readonly A[]>
+```
+
+Added in v2.11.0
 
 ## ~~readonlyArray~~
 
